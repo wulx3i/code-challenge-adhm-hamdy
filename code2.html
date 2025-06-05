@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Cairo+Play:wght@200..1000&family=Cairo:wght@200..1000&family=Handjet:wght@100..900&family=Marhey&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>سلسلة كودك رايق 2 | Walaa </title>
+
+    <style>
+        
+        *{font-family: 'Cairo',sans-serif ; scroll-behavior: smooth;}
+        body{background-image: url(bg.jpg); background-repeat: no-repeat; background-size: cover; margin: 0; padding: 0;}
+        h3{color: #fff; margin-left: 36% ; margin-top:8%; padding-top: 20px; font-size: 24px;}
+        .btn{ margin-left: 44% ;  padding: 10px 20px; font-weight: 500; border: 1px solid rgb(6, 44, 82); border-radius: 8px; transition: all .4s ease;}
+        .btn:hover{background-color:  rgb(2, 4, 32); cursor: pointer; color: #fff; border-radius: 12px; box-shadow: 0 0 40px rgb(1, 12, 46);}
+        .choise{margin-bottom: 100px;}
+        .all{margin: auto; width: 80%; height: 500px; background-color: #fff; box-shadow: 0 0 30px #030c1f; border-radius: 24px; background: transparent; backdrop-filter: blur(10px);}
+
+        .slider{
+            margin-top: 90px;
+            width: 100%;
+            height: var(--height);
+            overflow: hidden;
+            mask-image: linear-gradient(
+                to right, 
+                transparent,
+                #000 10% 90%,
+                transparent
+            );
+        }
+        .slider .list{display: flex;}
+        .slider .list .item{width: var(--width); height: var(--height); animation: none;}
+        .slider .list .item img{ width: 100%;}
+        ul{ display: flex; gap: 40px; margin-left: 800px;}
+        ul li a:hover{color:  #090542;}
+        .home{color: #fff;}
+        .container{width: 90%;  height: 480px; }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li style="list-style: none;"><a href="#choise" style="color: #fff; text-decoration: none;">اخـتـيار فـيـلم</a></li>
+            <li style="list-style: none;"><a href="#home" style="color: #fff; text-decoration: none;">الـرئيسيـة</a></li>
+
+        </ul>
+    </header>
+ <section class="home" id="home">
+  <div class="container">
+    <h2 style="margin-left: 800px; margin-top: 210px; font-size: 40px;">محتار ايش تتابع فيلم؟</h2>
+    <p style="margin-left: 970px; margin-top: -30px;">🫵🎞️موقع(-----) هو مُساعدك</p>
+  </div>
+ </section>
+ <section class="choise" id="choise">
+  <div class="all">
+    <h3>📺🎞️اخـتــار لـي فـيـلـم</h3>
+    <button id="btn" class="btn" onclick="moviesName()">اخـتــار</button>
+    <div id="space" style="color: #fff; margin-left: 38%; margin-top: 20px; font-size: 20px; padding: 0;"></div>
+
+
+    <!-- <h3>قائمه الافلام</h3> -->
+     <div class="result" id="result"></div>
+    <div class="slider" style="
+       --width:200px;
+       --height:200px;
+       --quantity: 9;
+       ">
+        <div class="list" >
+            <div class="item" style="--position: 1"><img src="5908813485700139195.jpg" alt="zootopia"></div>
+            <div class="item" style="--position: 2; margin-top: 20px;"><img src="5908813485700139196.jpg" alt="Ratatouille"></div>
+            <div class="item" style="--position: 3"><img src="5908813485700139197.jpg" alt="Avtar"></div>
+            <div class="item" style="--position: 4; margin-top: 20px;"><img src="5908813485700139198.jpg" alt="Dragon"></div>
+            <div class="item" style="--position: 5"><img src="5908813485700139200.jpg" alt="Dragon"></div>
+            <div class="item" style="--position: 6; margin-top: 20px;"><img src="5908813485700139201.jpg" alt="BBepx"></div>
+            <div class="item" style="--position: 7"><img src="5908813485700139202.jpg" alt="kong fu panda"></div>
+            <div class="item" style="--position: 8; margin-top: 20px;"><img src="5908813485700139203.jpg" alt="TURBO"></div>
+            <div class="item" style="--position: 9"><img src="5908813485700139204.jpg" alt="BOLT"></div>
+        </div>
+    </div>
+
+  <script>
+    const movies =["zootopia","Ratatouille","Avtar","Dragon","Nemo","BBepx","kong fu panda","TURBO","BOLT"];
+
+        function moviesName(){
+            const randomMovie = Math.floor(Math.random() * movies.length);
+            const randomM = movies[randomMovie];
+            document.getElementById('space').textContent = randomM + "  أنا أقترح لك مُشاهده  ";
+        }
+  </script>
+  </div>
+ </section>
+</body>
+</html>
